@@ -22,4 +22,5 @@
         android:text="id"
         android:id="@+id/single_post_tv_id"
         android:visibility="gone" />
+
 </LinearLayout>
