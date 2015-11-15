@@ -31,6 +31,8 @@ public class MainActivity extends Activity {
     private static final String TAG_PRODUCTS = "empresas";
     private static final String TAG_ID = "id";
     private static final String TAG_NOMBRE = "nombre";
+    private static final String TAG_DESCRIPCION = "descripcion";
+
     JSONArray products = null;
     ListView lista;
 
@@ -57,9 +59,12 @@ public class MainActivity extends Activity {
                         JSONObject c = products.getJSONObject(i);
                         String id = c.getString(TAG_ID);
                         String name = c.getString(TAG_NOMBRE);
+                        String descripcion = c.getString(TAG_DESCRIPCION);
+
                         HashMap map = new HashMap();
                         map.put(TAG_ID, id);
                         map.put(TAG_NOMBRE, name);
+                        map.put(TAG_DESCRIPCION, descripcion);
                         empresaList.add(map);
                     }
                 }
@@ -76,10 +81,12 @@ public class MainActivity extends Activity {
                             MainActivity.this, empresaList, R.layout.resultado,new String[] {
                             TAG_ID,
                             TAG_NOMBRE,
+                            TAG_DESCRIPCION,
                     },
                             new int[] {
                                     R.id.single_post_tv_id,
                                     R.id.single_post_tv_nombre,
+                                    R.id.single_post_tv_descripcion,
                             });
                     lista.setAdapter(adapter);
                 }

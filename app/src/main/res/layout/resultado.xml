@@ -22,5 +22,11 @@
         android:text="id"
         android:id="@+id/single_post_tv_id"
         android:visibility="gone" />
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="descripcion"
+        android:id="@+id/single_post_tv_descripcion"
+        android:visibility="gone" />
 </LinearLayout>
