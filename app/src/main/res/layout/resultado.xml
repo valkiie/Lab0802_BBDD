@@ -28,5 +28,5 @@
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="descripcion"
         android:id="@+id/single_post_tv_descripcion"
-        android:visibility="gone" />
+         />
 </LinearLayout>
